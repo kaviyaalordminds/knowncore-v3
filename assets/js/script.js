@@ -1,18 +1,65 @@
 (function () {
     "use strict";
 
-    // Preloader
+    // ========================
+    // DARK / LIGHT THEME TOGGLE
+    // ========================
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+    
+    function updateThemeIcon(theme) {
+        if (themeIcon) {
+            if (theme === 'dark') {
+                themeIcon.classList.remove('bi-moon-fill');
+                themeIcon.classList.add('bi-sun-fill');
+            } else {
+                themeIcon.classList.remove('bi-sun-fill');
+                themeIcon.classList.add('bi-moon-fill');
+            }
+        }
+    }
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+            
+            // Add a subtle animation to the button
+            this.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 300);
+        });
+    }
+
+    // ========================
+    // PRELOADER
+    // ========================
     window.addEventListener('load', function() {
         const preloader = document.querySelector('.js-preloader');
         if (preloader) {
-            preloader.classList.add('loaded');
             setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 500);
+                preloader.classList.add('loaded');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 600);
+            }, 2000); // Show preloader for 2 seconds to enjoy the animation
         }
     });
 
-    // Header Sticky on Scroll
+    // ========================
+    // HEADER STICKY ON SCROLL
+    // ========================
     const header = document.querySelector('.header-area');
     if (header) {
         window.addEventListener('scroll', function() {
@@ -24,7 +71,9 @@
         });
     }
 
-    // Smooth Scroll for Navigation Links
+    // ========================
+    // SMOOTH SCROLL FOR NAVIGATION
+    // ========================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -52,7 +101,9 @@
         });
     });
 
-    // Active Navigation Link on Scroll
+    // ========================
+    // ACTIVE NAVIGATION LINK ON SCROLL
+    // ========================
     const sections = document.querySelectorAll('section[id]');
     if (sections.length > 0) {
         window.addEventListener('scroll', function() {
@@ -74,7 +125,9 @@
         });
     }
 
-    // Scroll to Top Button
+    // ========================
+    // SCROLL TO TOP BUTTON
+    // ========================
     const scrollToTopBtn = document.createElement('div');
     scrollToTopBtn.className = 'scroll-to-top';
     scrollToTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
@@ -95,7 +148,9 @@
         });
     });
 
-    // Contact Form Handler
+    // ========================
+    // CONTACT FORM HANDLER
+    // ========================
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -116,7 +171,9 @@
         });
     }
 
-    // Counter Animation for Stats
+    // ========================
+    // COUNTER ANIMATION
+    // ========================
     function animateCounter(el, target, duration = 2000) {
         let start = 0;
         const increment = target / (duration / 16);
@@ -133,8 +190,10 @@
         updateCounter();
     }
 
-    // Intersection Observer for Animations
-    const animateElements = document.querySelectorAll('.service-item, .course-item, .work-item, .gallery-item, .client-logo, .stat-item');
+    // ========================
+    // INTERSECTION OBSERVER FOR ANIMATIONS
+    // ========================
+    const animateElements = document.querySelectorAll('.service-item, .course-item-scholar, .work-item, .gallery-item, .client-logo, .stat-item, .faq-item-scholar, .team-item, .event-item');
     
     const observerOptions = {
         threshold: 0.1,
@@ -173,7 +232,9 @@
         counterObserver.observe(counter);
     });
 
-    // Navbar Toggler Animation
+    // ========================
+    // NAVBAR TOGGLER ANIMATION
+    // ========================
     const navbarToggler = document.querySelector('.navbar-toggler');
     if (navbarToggler) {
         navbarToggler.addEventListener('click', function() {
@@ -181,7 +242,9 @@
         });
     }
 
-    // Gallery Lightbox Effect
+    // ========================
+    // GALLERY LIGHTBOX
+    // ========================
     const galleryItems = document.querySelectorAll('.gallery-item');
     galleryItems.forEach(item => {
         item.addEventListener('click', function() {
@@ -234,7 +297,9 @@
         });
     });
 
-    // Newsletter Form Handler
+    // ========================
+    // NEWSLETTER FORM
+    // ========================
     const newsletterForms = document.querySelectorAll('.newsletter-form');
     newsletterForms.forEach(form => {
         form.addEventListener('submit', function(e) {
@@ -247,7 +312,9 @@
         });
     });
 
-    // Work Item Click Handler
+    // ========================
+    // WORK ITEM CLICK
+    // ========================
     const workItems = document.querySelectorAll('.work-item');
     workItems.forEach(item => {
         item.addEventListener('click', function(e) {
@@ -257,7 +324,9 @@
         });
     });
 
-    // Password Toggle for Auth Pages
+    // ========================
+    // PASSWORD TOGGLE
+    // ========================
     const passwordToggles = document.querySelectorAll('.password-toggle');
     passwordToggles.forEach(toggle => {
         toggle.addEventListener('click', function() {
@@ -275,7 +344,9 @@
         });
     });
 
-    // Auth Form Handlers
+    // ========================
+    // AUTH FORM HANDLERS
+    // ========================
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
@@ -305,5 +376,108 @@
             }, 1500);
         });
     }
+
+    // ========================
+    // FAQ ACCORDION ENHANCEMENT (SCHOLAR STYLE)
+    // ========================
+    const faqQuestions = document.querySelectorAll('.faq-question-scholar');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other items
+            faqQuestions.forEach(q => {
+                if (q !== this) {
+                    q.setAttribute('aria-expanded', 'false');
+                    q.classList.add('collapsed');
+                }
+            });
+            
+            // Toggle current item
+            this.setAttribute('aria-expanded', !isExpanded);
+            if (isExpanded) {
+                this.classList.add('collapsed');
+            } else {
+                this.classList.remove('collapsed');
+            }
+        });
+    });
+
+    // ========================
+    // COURSE FILTER TABS
+    // ========================
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const courseWrappers = document.querySelectorAll('.course-item-wrapper');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active to clicked button
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            courseWrappers.forEach(wrapper => {
+                const category = wrapper.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    wrapper.style.display = 'block';
+                    wrapper.style.opacity = '0';
+                    wrapper.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        wrapper.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        wrapper.style.opacity = '1';
+                        wrapper.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    wrapper.style.opacity = '0';
+                    wrapper.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        wrapper.style.display = 'none';
+                    }, 400);
+                }
+            });
+        });
+    });
+
+    // ========================
+    // 3D WAVE PARALLAX EFFECT
+    // ========================
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const waves = document.querySelectorAll('.wave');
+            
+            waves.forEach((wave, index) => {
+                const speed = (index + 1) * 0.3;
+                wave.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    }
+
+    // ========================
+    // HERO CARD 3D TILT EFFECT
+    // ========================
+    const heroCards = document.querySelectorAll('.hero-card');
+    heroCards.forEach(card => {
+        card.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'perspective(1000px) rotateX(2deg) rotateY(0deg)';
+        });
+    });
 
 })();

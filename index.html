@@ -19,8 +19,16 @@
     <!-- Preloader -->
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
+            <div class="preloader-book">
+                <div class="book-page left"></div>
+                <div class="book-page right"></div>
+                <div class="book-spine"></div>
+            </div>
+            <div class="preloader-text">
+                <span class="preloader-brand">Knowncore</span>
+                <span class="preloader-sub">Edutech</span>
+            </div>
+            <div class="preloader-dots">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -28,7 +36,7 @@
         </div>
     </div>
 
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
@@ -43,14 +51,18 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
-                                <li class="nav-item"><a href="index.html#top" class="nav-link active">Home</a></li>
                                 <li class="nav-item"><a href="index.html#about" class="nav-link">About Us</a></li>
+                                <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
                                 <li class="nav-item"><a href="index.html#courses" class="nav-link">Our Courses</a></li>
-                                <li class="nav-item"><a href="index.html#clients" class="nav-link">Our Clients</a></li>
                                 <li class="nav-item"><a href="index.html#works" class="nav-link">Our Works</a></li>
                                 <li class="nav-item"><a href="index.html#gallery" class="nav-link">Gallery</a></li>
-                                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
-                                <li class="nav-item"><a href="login.html" class="nav-link btn-login-nav">Login</a></li>
+                                <li class="nav-item"><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact Us</a></li>
+                                <li class="nav-item">
+                                    <button class="theme-toggle-btn" id="themeToggle" title="Toggle Dark/Light Mode">
+                                        <i class="bi bi-moon-fill" id="themeIcon"></i>
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -59,8 +71,16 @@
         </div>
     </header>
 
-    <!-- Hero Section with Working Carousel -->
+    <!-- Hero Section -->
     <section class="hero-section" id="top">
+        <div class="wave-container">
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+            <div class="wave wave-3"></div>
+            <div class="wave wave-4"></div>
+            <div class="wave wave-5"></div>
+        </div>
+        
         <div class="deco-circle deco-nav-1"></div>
         <div class="deco-circle deco-nav-2"></div>
         <div class="deco-circle deco-hero-1"></div>
@@ -75,11 +95,12 @@
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
                         </div>
                         <div class="carousel-inner">
                             <!-- Slide 1 -->
                             <div class="carousel-item active">
-                                <div class="hero-card" style="background: url(\'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=600&fit=crop\') center/cover no-repeat;">
+                                <div class="hero-card" style="background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop') center/cover no-repeat;">
                                     <div class="hero-card-overlay"></div>
                                     <div class="hero-content">
                                         <span class="badge-label">WELCOME TO KNOWNCORE</span>
@@ -101,7 +122,7 @@
                             </div>
                             <!-- Slide 2 -->
                             <div class="carousel-item">
-                                <div class="hero-card" style="background: url(\'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=600&fit=crop\') center/cover no-repeat;">
+                                <div class="hero-card" style="background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop') center/cover no-repeat;">
                                     <div class="hero-card-overlay"></div>
                                     <div class="hero-content">
                                         <span class="badge-label">TOP-RATED COURSES</span>
@@ -123,7 +144,7 @@
                             </div>
                             <!-- Slide 3 -->
                             <div class="carousel-item">
-                                <div class="hero-card" style="background: url(\'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=600&fit=crop\') center/cover no-repeat;">
+                                <div class="hero-card" style="background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=600&fit=crop') center/cover no-repeat;">
                                     <div class="hero-card-overlay"></div>
                                     <div class="hero-content">
                                         <span class="badge-label">100% PLACEMENT SUPPORT</span>
@@ -143,8 +164,29 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="hero-card" style="background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=600&fit=crop') center/cover no-repeat;">
+                                    <div class="hero-card-overlay"></div>
+                                    <div class="hero-content">
+                                        <span class="badge-label">LEARN ANYWHERE, ANYTIME</span>
+                                        <h1>Flexible Learning<br>For Everyone</h1>
+                                        <p>Access world-class education from anywhere in the world. Our online platform offers live classes, recorded sessions, and interactive projects at your pace.</p>
+                                        <div class="hero-buttons">
+                                            <a href="signup.html" class="btn btn-request">Start Learning</a>
+                                            <a href="index.html#faq" class="btn btn-play">
+                                                <span class="play-icon">
+                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                    </svg>
+                                                </span>
+                                                Learn More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Custom Navigation Arrows -->
                         <button class="hero-arrow hero-arrow-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="15 18 9 12 15 6"></polyline>
@@ -182,7 +224,6 @@
                         </div>
                         <p>Knowncore Edutech is a premier educational technology company dedicated to bridging the gap between academic knowledge and industry requirements. We provide cutting-edge training programs that prepare students for real-world challenges.</p>
                         <p>Our mission is to democratize quality education and make it accessible to learners everywhere. With a team of seasoned industry professionals and state-of-the-art learning platforms, we ensure every student achieves their career goals.</p>
-                        
                         <div class="about-features">
                             <div class="feature-item">
                                 <div class="icon"><i class="bi bi-check-circle-fill"></i></div>
@@ -206,8 +247,45 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <a href="index.html#contact" class="btn btn-primary mt-4">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                        <h4>Online Degrees</h4>
+                        <p>Whenever you need free templates in HTML CSS, you just remember this website. We provide the best educational resources.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="bi bi-journal-bookmark-fill"></i>
+                        </div>
+                        <h4>Short Courses</h4>
+                        <p>You can browse free templates based on different tags such as digital marketing, web development, and more.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h4>Web Experts</h4>
+                        <p>You can start learning HTML, CSS by modifying free templates from our website. Build your skills today.</p>
+                        <a href="#" class="read-more">Read More</a>
                     </div>
                 </div>
             </div>
@@ -220,294 +298,116 @@
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
                     <div class="section-heading">
-                        <h6>Our Courses</h6>
+                        <h6>Latest Courses</h6>
                         <h2>Popular Programs</h2>
                     </div>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="course-item">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="course-filter-tabs">
+                        <button class="filter-btn active" data-filter="all">Show All</button>
+                        <button class="filter-btn" data-filter="webdesign">Webdesign</button>
+                        <button class="filter-btn" data-filter="development">Development</button>
+                        <button class="filter-btn" data-filter="wordpress">Wordpress</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 course-grid">
+                <div class="col-lg-4 col-md-6 course-item-wrapper" data-category="webdesign">
+                    <div class="course-item-scholar">
                         <div class="thumb">
                             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Full Stack Development" class="img-fluid">
-                            <div class="price"><span>6 Months</span></div>
+                            <div class="price-tag">$160</div>
+                            <div class="category-tag">Webdesign</div>
                         </div>
                         <div class="down-content">
-                            <span class="category">Development</span>
-                            <h4>Full Stack Web Development</h4>
-                            <p>Master MERN stack, Node.js, React, and modern web technologies with hands-on projects.</p>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul class="stars">
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <span class="students"><i class="bi bi-person"></i> 850</span>
-                                    </div>
-                                </div>
+                            <div class="course-meta">
+                                <span class="instructor"><i class="bi bi-person"></i> Stella Blair</span>
                             </div>
+                            <h4>Learn Web Design</h4>
+                            <p>Master modern web design principles, UI/UX fundamentals, and responsive design techniques.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="course-item">
+                <div class="col-lg-4 col-md-6 course-item-wrapper" data-category="development">
+                    <div class="course-item-scholar">
                         <div class="thumb">
                             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Data Science" class="img-fluid">
-                            <div class="price"><span>4 Months</span></div>
+                            <div class="price-tag">$340</div>
+                            <div class="category-tag">Development</div>
                         </div>
                         <div class="down-content">
-                            <span class="category">Data Science</span>
-                            <h4>Data Science & AI</h4>
-                            <p>Learn Python, Machine Learning, Deep Learning, and AI applications with real datasets.</p>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul class="stars">
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-half"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <span class="students"><i class="bi bi-person"></i> 620</span>
-                                    </div>
-                                </div>
+                            <div class="course-meta">
+                                <span class="instructor"><i class="bi bi-person"></i> Cindy Walker</span>
                             </div>
+                            <h4>Web Development Tips</h4>
+                            <p>Learn advanced web development techniques, frameworks, and best practices for modern apps.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="course-item">
+                <div class="col-lg-4 col-md-6 course-item-wrapper" data-category="wordpress">
+                    <div class="course-item-scholar">
                         <div class="thumb">
                             <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop" alt="UI/UX Design" class="img-fluid">
-                            <div class="price"><span>3 Months</span></div>
+                            <div class="price-tag">$640</div>
+                            <div class="category-tag">Wordpress</div>
                         </div>
                         <div class="down-content">
-                            <span class="category">Design</span>
-                            <h4>UI/UX Design Masterclass</h4>
-                            <p>Create stunning user interfaces and experiences using Figma, Adobe XD, and design principles.</p>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul class="stars">
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <span class="students"><i class="bi bi-person"></i> 430</span>
-                                    </div>
-                                </div>
+                            <div class="course-meta">
+                                <span class="instructor"><i class="bi bi-person"></i> David Hutson</span>
                             </div>
+                            <h4>Latest Web Trends</h4>
+                            <p>Stay ahead with the latest web trends, design patterns, and emerging technologies.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="course-item">
+                <div class="col-lg-4 col-md-6 course-item-wrapper" data-category="development">
+                    <div class="course-item-scholar">
                         <div class="thumb">
                             <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=250&fit=crop" alt="Digital Marketing" class="img-fluid">
-                            <div class="price"><span>3 Months</span></div>
+                            <div class="price-tag">$450</div>
+                            <div class="category-tag">Development</div>
                         </div>
                         <div class="down-content">
-                            <span class="category">Marketing</span>
-                            <h4>Digital Marketing Pro</h4>
-                            <p>Master SEO, SEM, social media marketing, content strategy, and analytics tools.</p>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul class="stars">
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <span class="students"><i class="bi bi-person"></i> 380</span>
-                                    </div>
-                                </div>
+                            <div class="course-meta">
+                                <span class="instructor"><i class="bi bi-person"></i> Stella Blair</span>
                             </div>
+                            <h4>Online Learning Steps</h4>
+                            <p>Master SEO, SEM, social media marketing, content strategy, and analytics tools.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="course-item">
+                <div class="col-lg-4 col-md-6 course-item-wrapper" data-category="wordpress">
+                    <div class="course-item-scholar">
                         <div class="thumb">
                             <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop" alt="Cloud Computing" class="img-fluid">
-                            <div class="price"><span>5 Months</span></div>
+                            <div class="price-tag">$320</div>
+                            <div class="category-tag">Wordpress</div>
                         </div>
                         <div class="down-content">
-                            <span class="category">Cloud</span>
-                            <h4>Cloud Computing & DevOps</h4>
-                            <p>Learn AWS, Azure, Docker, Kubernetes, and CI/CD pipelines for modern infrastructure.</p>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul class="stars">
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-half"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <span class="students"><i class="bi bi-person"></i> 290</span>
-                                    </div>
-                                </div>
+                            <div class="course-meta">
+                                <span class="instructor"><i class="bi bi-person"></i> Sophia Rose</span>
                             </div>
+                            <h4>Be a WordPress Master</h4>
+                            <p>Learn AWS, Azure, Docker, Kubernetes, and CI/CD pipelines for modern infrastructure.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="course-item">
+                <div class="col-lg-4 col-md-6 course-item-wrapper" data-category="webdesign">
+                    <div class="course-item-scholar">
                         <div class="thumb">
                             <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop" alt="Cyber Security" class="img-fluid">
-                            <div class="price"><span>4 Months</span></div>
+                            <div class="price-tag">$240</div>
+                            <div class="category-tag">Webdesign</div>
                         </div>
                         <div class="down-content">
-                            <span class="category">Security</span>
-                            <h4>Cyber Security Essentials</h4>
-                            <p>Learn ethical hacking, network security, penetration testing, and security best practices.</p>
-                            <div class="info">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <ul class="stars">
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                            <li><i class="bi bi-star-fill"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <span class="students"><i class="bi bi-person"></i> 340</span>
-                                    </div>
-                                </div>
+                            <div class="course-meta">
+                                <span class="instructor"><i class="bi bi-person"></i> David Hutson</span>
                             </div>
+                            <h4>Full Stack Developer</h4>
+                            <p>Learn ethical hacking, network security, penetration testing, and security best practices.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Clients Section -->
-    <section class="section clients" id="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <div class="section-heading">
-                        <h6>Trusted By</h6>
-                        <h2>Our Clients & Partners</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 justify-content-center align-items-center">
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="client-logo">
-                        <div class="logo-placeholder">
-                            <i class="bi bi-building"></i>
-                            <span>TechCorp</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="client-logo">
-                        <div class="logo-placeholder">
-                            <i class="bi bi-globe"></i>
-                            <span>GlobalSoft</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="client-logo">
-                        <div class="logo-placeholder">
-                            <i class="bi bi-laptop"></i>
-                            <span>CodeBase</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="client-logo">
-                        <div class="logo-placeholder">
-                            <i class="bi bi-cloud"></i>
-                            <span>CloudNine</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="client-logo">
-                        <div class="logo-placeholder">
-                            <i class="bi bi-shield-check"></i>
-                            <span>SecureNet</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="client-logo">
-                        <div class="logo-placeholder">
-                            <i class="bi bi-graph-up"></i>
-                            <span>DataFlow</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="client-logo">
-                        <div class="logo-placeholder">
-                            <i class="bi bi-phone"></i>
-                            <span>AppWorks</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="client-logo">
-                        <div class="logo-placeholder">
-                            <i class="bi bi-cpu"></i>
-                            <span>ChipTech</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item text-center">
-                        <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
-                        <h3 class="counter" data-target="15000">0</h3>
-                        <p>Students Trained</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item text-center">
-                        <div class="stat-icon"><i class="bi bi-briefcase-fill"></i></div>
-                        <h3 class="counter" data-target="12000">0</h3>
-                        <p>Placements</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item text-center">
-                        <div class="stat-icon"><i class="bi bi-building-fill"></i></div>
-                        <h3 class="counter" data-target="500">0</h3>
-                        <p>Partner Companies</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item text-center">
-                        <div class="stat-icon"><i class="bi bi-award-fill"></i></div>
-                        <h3 class="counter" data-target="50">0</h3>
-                        <p>Industry Awards</p>
                     </div>
                 </div>
             </div>
@@ -696,6 +596,72 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="faq-left-panel">
+                        <div class="faq-accordion-scholar" id="faqAccordionScholar">
+                            <div class="faq-item-scholar">
+                                <button class="faq-question-scholar collapsed" data-bs-toggle="collapse" data-bs-target="#faqScholar1" aria-expanded="false">
+                                    <span>Where shall we begin?</span>
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                                <div id="faqScholar1" class="collapse show" data-bs-parent="#faqAccordionScholar">
+                                    <div class="faq-answer-scholar">
+                                        <p>There are more than one hundred responsive HTML templates to choose from TemplateMo website. You can browse by different tags or categories.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-item-scholar">
+                                <button class="faq-question-scholar collapsed" data-bs-toggle="collapse" data-bs-target="#faqScholar2" aria-expanded="false">
+                                    <span>How do we work together?</span>
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                                <div id="faqScholar2" class="collapse" data-bs-parent="#faqAccordionScholar">
+                                    <div class="faq-answer-scholar">
+                                        <p>We work collaboratively through live sessions, recorded content, and hands-on projects. Our mentors guide you every step of the way.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-item-scholar">
+                                <button class="faq-question-scholar collapsed" data-bs-toggle="collapse" data-bs-target="#faqScholar3" aria-expanded="false">
+                                    <span>Why SCHOLAR is the best?</span>
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                                <div id="faqScholar3" class="collapse" data-bs-parent="#faqAccordionScholar">
+                                    <div class="faq-answer-scholar">
+                                        <p>Knowncore Edutech offers industry-relevant curriculum, expert instructors, and 100% placement support with 500+ partner companies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-item-scholar">
+                                <button class="faq-question-scholar collapsed" data-bs-toggle="collapse" data-bs-target="#faqScholar4" aria-expanded="false">
+                                    <span>Do we get the best support?</span>
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                                <div id="faqScholar4" class="collapse" data-bs-parent="#faqAccordionScholar">
+                                    <div class="faq-answer-scholar">
+                                        <p>Yes! We provide 24/7 support through our dedicated help desk, community forums, and direct mentor access for all students.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="faq-right-content">
+                        <span class="section-label">About Us</span>
+                        <h2 class="section-title">What Make Us The Best Academy Online?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida risus commodo.</p>
+                        <a href="#" class="btn btn-scholar-outline">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
@@ -703,11 +669,10 @@
                 <div class="col-lg-5">
                     <div class="contact-left">
                         <span class="section-label">CONTACT US</span>
-                        <h2 class="section-title">Let\'s Start Your Learning Journey</h2>
+                        <h2 class="section-title">Feel Free To Contact Us Anytime</h2>
                         <p class="section-desc">
-                            Have questions about our courses or want to enroll? Reach out to us and our team will guide you through the process. We\'re here to help you succeed.
+                            Thank you for choosing our templates. We provide you best CSS templates at absolutely 100% free of charge. You may support us by sharing our website to your friends.
                         </p>
-                        
                         <div class="contact-info-list">
                             <div class="contact-info-item">
                                 <div class="icon"><i class="bi bi-geo-alt-fill"></i></div>
@@ -731,15 +696,14 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="offer-card">
                             <div class="offer-badge">
-                                <span class="off-text">NEW</span>
-                                <span class="percent">BATCH</span>
+                                <span class="off-text">OFF</span>
+                                <span class="percent">50%</span>
                             </div>
                             <div class="offer-info">
-                                <p class="valid-date">STARTING: <span>01 JULY 2026</span></p>
-                                <p class="offer-text">New Batch <span class="highlight">Enrolling Now!</span></p>
+                                <p class="valid-date">VALID: 24 APRIL 2026</p>
+                                <p class="offer-text">Special Offer <span class="highlight">50% OFF!</span></p>
                             </div>
                             <a href="signup.html" class="offer-arrow">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -749,14 +713,12 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-7">
                     <div class="contact-form-wrapper">
                         <div class="deco-circle deco-1"></div>
                         <div class="deco-circle deco-2"></div>
                         <div class="deco-circle deco-3"></div>
                         <div class="deco-circle deco-4"></div>
-                        
                         <form class="contact-form" id="contactForm">
                             <div class="form-group">
                                 <input type="text" class="form-input" placeholder="Your Name" required>
@@ -794,7 +756,6 @@
         <div class="deco-circle deco-foot-1"></div>
         <div class="deco-circle deco-foot-2"></div>
         <div class="deco-circle deco-foot-3"></div>
-        
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -851,7 +812,7 @@
             <div class="footer-bottom">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <p>Copyright &copy; 2026 Knowncore Edutech. All rights reserved. <span class="divider">|</span> Designed with <i class="bi bi-heart-fill"></i> for learners</p>
+                        <p>Copyright &copy; 2026 Knowncore Edutech. All rights reserved.</p>
                     </div>
                 </div>
             </div>
