@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholar - Educational Website Template</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav navbar navbar-expand-lg">
+                        <a href="#" class="logo navbar-brand">
+                            <h1>SCHOLAR</h1>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item"><a href="#top" class="nav-link active">Home</a></li>
+                                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                                <li class="nav-item"><a href="#courses" class="nav-link">Courses</a></li>
+                                <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+                                <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section main-banner" id="top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="header-text">
+                        <h6>Welcome to Scholar</h6>
+                        <h2>Best Online Education Expertise</h2>
+                        <p>Scholar is a free educational website template designed for online learning platforms. It features a modern design with Bootstrap 5 framework.</p>
+                        <div class="buttons">
+                            <a href="#courses" class="btn btn-primary">Discover More</a>
+                            <a href="#contact" class="btn btn-outline-light">Join Us Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-image">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=500&fit=crop" alt="Student learning" class="img-fluid rounded-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <div class="section-heading">
+                        <h6>Our Services</h6>
+                        <h2>What We Offer</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                        <div class="main-content">
+                            <h4>Online Degrees</h4>
+                            <p>Earn accredited degrees from top universities around the world through our online platform.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="bi bi-journal-bookmark-fill"></i>
+                        </div>
+                        <div class="main-content">
+                            <h4>Short Courses</h4>
+                            <p>Enhance your skills with our wide range of short courses designed for quick learning.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <div class="main-content">
+                            <h4>Expert Teachers</h4>
+                            <p>Learn from industry experts and experienced educators who are passionate about teaching.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Accordion Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=500&fit=crop" alt="About Scholar" class="img-fluid rounded-4">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>What Makes Us The Best Academy Online?</h2>
+                        </div>
+                        <p>We provide quality education with flexible learning schedules, expert instructors, and recognized certifications.</p>
+                        
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        Best Useful Tricks
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Learn the best tricks and techniques from industry professionals to accelerate your learning journey.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        Highly Qualified Instructors
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our instructors hold advanced degrees and have years of real-world experience in their fields.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        Book & Library Facilities
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Access our extensive digital library with thousands of books, journals, and research papers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section courses" id="courses">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <div class="section-heading">
+                        <h6>Latest Courses</h6>
+                        <h2>Popular Courses</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-item">
+                        <div class="thumb">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop" alt="Web Design" class="img-fluid">
+                            <div class="price">
+                                <span>$120</span>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <span class="category">Web Design</span>
+                            <h4>Learn HTML CSS and Web Design</h4>
+                            <p>Master the fundamentals of web development with HTML5 and CSS3.</p>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul class="stars">
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-half"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <span class="students"><i class="bi bi-person"></i> 120</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-item">
+                        <div class="thumb">
+                            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=250&fit=crop" alt="Programming" class="img-fluid">
+                            <div class="price">
+                                <span>$180</span>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <span class="category">Programming</span>
+                            <h4>JavaScript and Modern Frameworks</h4>
+                            <p>Learn modern JavaScript and popular frameworks like React and Vue.</p>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul class="stars">
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <span class="students"><i class="bi bi-person"></i> 250</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-item">
+                        <div class="thumb">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Data Science" class="img-fluid">
+                            <div class="price">
+                                <span>$240</span>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <span class="category">Data Science</span>
+                            <h4>Data Analysis with Python</h4>
+                            <p>Become a data scientist with Python, pandas, and machine learning.</p>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <ul class="stars">
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star-fill"></i></li>
+                                            <li><i class="bi bi-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <span class="students"><i class="bi bi-person"></i> 180</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <div class="section-heading">
+                        <h6>Our Team</h6>
+                        <h2>Meet Our Instructors</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="thumb">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" alt="Team Member" class="img-fluid">
+                            <div class="hover-effect">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>Alex Smith</h4>
+                            <span>Web Developer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="thumb">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face" alt="Team Member" class="img-fluid">
+                            <div class="hover-effect">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>Sarah Johnson</h4>
+                            <span>Data Scientist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="thumb">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Team Member" class="img-fluid">
+                            <div class="hover-effect">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>James Wilson</h4>
+                            <span>UI/UX Designer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="thumb">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Team Member" class="img-fluid">
+                            <div class="hover-effect">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>Emily Davis</h4>
+                            <span>Marketing Expert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <div class="section-heading">
+                        <h6>Testimonials</h6>
+                        <h2>What They Say</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-item text-center">
+                            <div class="icon"><i class="bi bi-quote"></i></div>
+                            <p>"Scholar has completely transformed my career. The courses are well-structured and the instructors are incredibly knowledgeable."</p>
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Author" class="rounded-circle">
+                                <h4>John Doe</h4>
+                                <span>Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item text-center">
+                            <div class="icon"><i class="bi bi-quote"></i></div>
+                            <p>"The flexibility of online learning combined with expert guidance made all the difference. Highly recommended!"</p>
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Author" class="rounded-circle">
+                                <h4>Jane Smith</h4>
+                                <span>Data Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item text-center">
+                            <div class="icon"><i class="bi bi-quote"></i></div>
+                            <p>"Best investment I've made in my education. The community support and resources are outstanding."</p>
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="Author" class="rounded-circle">
+                                <h4>Michael Brown</h4>
+                                <span>Product Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section events" id="events">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <div class="section-heading">
+                        <h6>Schedule</h6>
+                        <h2>Upcoming Events</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-sm-5">
+                                <div class="image">
+                                    <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=300&h=200&fit=crop" alt="Event" class="img-fluid rounded-3">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-sm-7">
+                                <div class="right-content">
+                                    <ul class="date">
+                                        <li><span>15</span><br>Mar</li>
+                                    </ul>
+                                    <a href="#"><h4>New Lecturers Meeting</h4></a>
+                                    <p>Morbi in libero blandit lectus cursus ullamcorper.</p>
+                                    <ul class="info">
+                                        <li><i class="bi bi-clock"></i> 8:00 AM - 5:00 PM</li>
+                                        <li><i class="bi bi-geo-alt"></i> Campus Center</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-sm-5">
+                                <div class="image">
+                                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=300&h=200&fit=crop" alt="Event" class="img-fluid rounded-3">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-sm-7">
+                                <div class="right-content">
+                                    <ul class="date">
+                                        <li><span>22</span><br>Mar</li>
+                                    </ul>
+                                    <a href="#"><h4>Web Design Workshop</h4></a>
+                                    <p>Morbi in libero blandit lectus cursus ullamcorper.</p>
+                                    <ul class="info">
+                                        <li><i class="bi bi-clock"></i> 10:00 AM - 4:00 PM</li>
+                                        <li><i class="bi bi-geo-alt"></i> Online</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <div class="section-heading">
+                        <h6>Contact Us</h6>
+                        <h2>Get In Touch</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <form id="contactForm" class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright © 2024 Scholar Academy. All Rights Reserved.</p>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
